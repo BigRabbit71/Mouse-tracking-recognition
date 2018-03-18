@@ -11,8 +11,6 @@ from sklearn import metrics, cross_validation
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.grid_search import GridSearchCV
 from sklearn.preprocessing import Imputer
-import lightgbm as lgb
-import xgboost as xgb
 import matplotlib
 import os
 
@@ -145,15 +143,6 @@ if __name__ == '__main__':
 
     sub_training_data_b, instanceIDs_b = testb.drop(['id', 'trajectory', 'aim'], axis=1).astype(float), testb['id']
 
-    # print (training_data.shape)
-    #
-    # train_x, test_x, train_y, test_y = train_test_split(training_data, label, test_size=0.01, random_state=0)
-
-    # 需要做一下GBDT！！！！！！！！！
-    # 调参尝试！！！！！！！！
-
-    # gbm = GradientBoostingClassifier(learning_rate=0.01, n_estimators=60, max_depth=7, min_samples_leaf=20,
-    #                                  min_samples_split=20, subsample=0.8)
     gbm = GradientBoostingClassifier(learning_rate=0.01, n_estimators=500, min_samples_split=50, max_depth=9,
                                      min_samples_leaf=4, max_features=15, subsample=0.7)
 
