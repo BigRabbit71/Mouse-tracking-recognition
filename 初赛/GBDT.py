@@ -143,7 +143,7 @@ if __name__ == '__main__':
 
     sub_training_data_b, instanceIDs_b = testb.drop(['id', 'trajectory', 'aim'], axis=1).astype(float), testb['id']
 
-    gbm = GradientBoostingClassifier(learning_rate=0.01, n_estimators=500, min_samples_split=50, max_depth=9,
+    gbm = GradientBoostingClassifier(learning_rate=0.01, n_estimators=50, min_samples_split=50, max_depth=9,
                                      min_samples_leaf=4, max_features=15, subsample=0.7)
 
     # 缺失值处理
