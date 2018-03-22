@@ -17,6 +17,7 @@
   
 ### Score
 F = (5PR/(2P+3R)) * 100
+
 => beta^2= 2/3, 查准率更重要。
 
 ### 数据探索
@@ -30,34 +31,34 @@ F = (5PR/(2P+3R)) * 100
 
 ### Model Selection
 - GBDT for 初赛
-  - 61 features
-  - 框架参数：
-    - n_estimators: 50
-    - subsample: 0.7
-    - learning_rate: 0.01
-    - loss: deviance
-   - 基学习器参数：
-    - max_depth: 9
-    - min_sample_split: 50
-    - max_features: 15
-    - min_sample_leaf:4
+ - 61 features
+ - 框架参数：
+   - n_estimators: 50
+   - subsample: 0.7
+   - learning_rate: 0.01
+   - loss: deviance
+ - 基学习器参数：
+   - max_depth: 9
+   - min_sample_split: 50
+   - max_features: 15
+   - min_sample_leaf:4
 
 - RF for 复赛
-  - 42 features
-  - 参数：
-    - 决策回归树颗数：100
-    - maxDepth：15
-    - maxFeatures: 10
-    - subsample: 0.6
-    - threshold： 0.87（理由：模型召回率太低，提高门限来提高召回率）
+ - 42 features
+ - 参数：
+  - 决策回归树颗数：100
+  - maxDepth：15
+  - maxFeatures: 10
+  - subsample: 0.6
+  - threshold： 0.87（理由：模型召回率太低，提高门限来提高召回率）
 
 ### 最终结果
 - 初赛：
-  - Score：85.33
-  - 排名：105/1222
+ - Score：85.33
+ - 排名：105/1222
 - 复赛：
-  - Score：60.78
-  - 排名：85/104
+ - Score：60.78
+ - 排名：85/104
   
 ### 赛后思考
 - 应该尝试stacking，进行model ensemble的==
