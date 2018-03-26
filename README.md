@@ -47,7 +47,7 @@ F = (5PR/(2P+3R)) * 100
  - 42 features
  - 参数：
    - 决策回归树颗数：100
-   - maxDepth：10
+   - max_features：30
    - threshold： 0.87（理由：模型召回率太低，提高门限来提高召回率）
 
 ### 最终结果
